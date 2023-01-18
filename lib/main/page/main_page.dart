@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_twitter/feed/page/home_page.dart';
 
 import '../../account/page/account_page.dart';
+import '../../home/page/home_page.dart';
 import '../../navigation/route.dart';
 import '../widget/bottom_bar.dart';
 

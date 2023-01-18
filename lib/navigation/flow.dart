@@ -28,7 +28,7 @@ GoRouter navigationFlow(String startRoute) {
 
 String firstScreenRoute(bool isTokenExist) {
   if (isTokenExist) {
-    return NavigationRoute.accountScreen;
+    return NavigationRoute.homeScreen;
   } else {
     return NavigationRoute.loginScreen;
   }

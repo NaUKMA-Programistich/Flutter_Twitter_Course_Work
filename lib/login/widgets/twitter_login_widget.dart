@@ -18,9 +18,9 @@ class TwitterLoginWidget extends StatelessWidget {
       onPressed: () async {
         bloc.add(LoginEventStartProcess());
         final twitterLogin = TwitterLogin(
-          apiKey: Constants.consumerApiKey,
-          apiSecretKey: Constants.consumerApiSecretKey,
-          redirectURI: Constants.redirectURI,
+          apiKey: TwitterConstants.consumerApiKey,
+          apiSecretKey: TwitterConstants.consumerApiSecretKey,
+          redirectURI: TwitterConstants.redirectURI,
         );
         final authResult = await twitterLogin.loginV2();
         switch (authResult.status) {

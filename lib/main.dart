@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_twitter/auth/repository/auth_repository.dart';
+import 'package:flutter_twitter/home/repository/home_repository.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'navigation/flow.dart';
@@ -38,6 +39,9 @@ class App extends StatelessWidget {
         providers: [
           RepositoryProvider(
             create: (context) => authRepository,
+          ),
+          RepositoryProvider(
+            create: (context) => HomeRepository(authRepository: authRepository),
           ),
         ],
         child: MaterialApp.router(
